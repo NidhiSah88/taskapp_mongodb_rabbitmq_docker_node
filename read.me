@@ -69,10 +69,43 @@ then build it
  docker-compose up -d --build
 
 
+RABBITMQ: 
+npm install amqplib
+
+run at : http://localhost:15672/#/
+
+RABBITMQ USERNAME AND PASSWORD IS guest
+
+docker-compose down
+docker-compose up -d --build
+
+cd notificat
+ion-service
+(base) nidhikumari@Nidhis-MacBook-Pro notification-service % npm install amqplib
 
 
+cd task-service
+(base) nidhikumari@Nidhis-MacBook-Pro task-service % npm install amqplib 
+
+added 84 packages, and audited 85 packages in 10s
 
 
+for issues like any service in docker compose not running : 
 
+docker ps -a
+docker-compose logs notification-service
+
+
+see in docker of notification-service , its consumed :
+2026-04-25 00:27:31 Notification Service Connected to RabbitMQ messages
+2026-04-25 00:29:16 Received task notification: {
+2026-04-25 00:29:16   taskId: '69ebbd840cd7581412972f13',
+2026-04-25 00:29:16   userId: '5',
+2026-04-25 00:29:16   title: 'Test Task five'
+2026-04-25 00:29:16 }
+2026-04-25 00:29:16 Received task notification: Test Task five
+
+YOUTUBE CHANNEL: 
+https://www.youtube.com/watch?v=w11dXbZJCBE
 
 
