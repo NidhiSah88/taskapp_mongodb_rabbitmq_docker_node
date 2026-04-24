@@ -29,7 +29,14 @@ Then:
 use users
 db.users.find().pretty()
 
+DEPENDENCIES:
 npm init -y 
+npm i express --save 
+npm install mongoose --save
+npm install body-parser
+
+
+
 docker-compose up -d
 
 docker-compose up -d --build
